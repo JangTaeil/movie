@@ -1,10 +1,10 @@
-import React, { useEffect,useState } from 'react';
-import {API_KEY, API_URL, IMAGE_BASE_URL} from '../Config'
-import MainImage from './Section/MainImage';
 import { Button, Row } from 'antd';
-import GridCards from '../commons/GridCards';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { API_KEY, API_URL, IMAGE_BASE_URL } from '../Config';
 import AntCard from '../commons/AntCard';
+import MainImage from './Section/MainImage';
+import Detail from '../Detail/Detail';
 
 function LandingPage() {
   const navigate = useNavigate()
@@ -25,6 +25,11 @@ function LandingPage() {
 
   return (
     <>
+    <div>
+      {/* <Link to='/items'>items 이동</Link> &nbsp;&nbsp; */}
+      {/* <a href='/items'>[a 태그] items로 이동</a> */}
+    </div>
+
     <div style={{ width: '100%' }}>
       {/* Main Image */}
       {MainMovieImage && 

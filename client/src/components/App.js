@@ -2,7 +2,7 @@ import NavBar from './NavBar/NavBar';
 import Footer from './Footer/Footer';
 import Items from './Items/Items';
 import LandingPage from './LandingPage/LandingPage';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Detail from './Detail/Detail';
 // import MovieInfo from './Detail/MovieInfo';
 // import ExTable from './example/ExTable';
@@ -13,10 +13,10 @@ function App() {
       <NavBar />
       <div style={{ minHeight: '100vh' }}>
         {/* 요청된 경로로 페이지 이동 : 특정 컴포넌트 실행 */}
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Routes>
             <Route path="/" element={<LandingPage />} />
-            <Route path="/movie/:movieId" element={<Detail />} />
+            <Route path="/detail/:movieId" element={<Detail />} />
             <Route path="/items" element={<Items />} />
             {/* <Route path="/example/table" element={<ExTable />} /> */}
           </Routes>

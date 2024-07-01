@@ -64,6 +64,8 @@ const Detail = () => {
 
   return (
     <>
+    
+
     {/* Header */}
       {Movie &&
       <MainImage 
