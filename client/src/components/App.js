@@ -4,8 +4,8 @@ import Items from './Items/Items';
 import LandingPage from './LandingPage/LandingPage';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Detail from './Detail/Detail';
-import MovieInfo from './Detail/MovieInfo';
-import ExTable from './example/ExTable';
+// import MovieInfo from './Detail/MovieInfo';
+// import ExTable from './example/ExTable';
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
             <Route path="/" element={<LandingPage />} />
             <Route path="/movie/:movieId" element={<Detail />} />
             <Route path="/items" element={<Items />} />
-            <Route path="/example/table" element={<ExTable />} />
+            {/* <Route path="/example/table" element={<ExTable />} /> */}
           </Routes>
         </Router>
       </div>
